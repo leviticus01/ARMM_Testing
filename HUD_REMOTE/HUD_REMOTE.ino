@@ -1,21 +1,14 @@
-#include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h> // REPLACE WITH <WiFi.h> FOR ESP32
+#include <ESP8266WebServer.h> // REPLACE WITH <WebServer.h> FOR ESP32
 #include <WiFiClient.h>
-#include <ESP8266WebServer.h>
 #include "index.h"
 
-// Define input pins
-#define LED1 0
-#define LED2 2
-
-// Define output pins
-#define BUTTON 16
-
 // Define Wi-Fi network SSID and password
-const char* ssid = "ESP8266_AP_Test";
-const char* password = "0123456789";
+const char* ssid = "ARMM_WiFi";
+const char* password = "ARMM_WiFi2025!";
 
 // Create a webserver object
-ESP8266WebServer server(80);
+ESP8266WebServer server(80);// REPLACE WITH WebServer server(80); FOR ESP 32
 
 // Set up the html webpage
 void handleRoot() {
